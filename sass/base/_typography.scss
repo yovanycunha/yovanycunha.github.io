@@ -4,6 +4,7 @@ body {
     line-height: 1.7;
     color: $color-gray-dark;
     box-sizing: border-box;
+    background-color: $color-gray-light-2;
     
 }
 
@@ -16,18 +17,24 @@ body {
         display: block;
         font-size: 4rem;
         letter-spacing: 2rem;
-        font-weight: 400;
+        font-weight: 600;
         animation: moveInLeft 1s ease-out;
-        text-align: center;
+        initial-letter-align: center;
 
     }
-
+    
     &--sub{
         display: block;
-        font-size: 2rem;
+        font-size: 1.4rem;
         font-weight: 700;
         letter-spacing: 1.75rem;
         animation: moveInRight 1s ease-out;
+        margin-top: 7rem;
     }
+}
+
+.link {
+    text-decoration: none;
+    color: $color-gray-dark-3;
 }
 
