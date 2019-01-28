@@ -2,17 +2,12 @@ body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
     line-height: 1.7;
-    color: $color-gray-dark;
+    color: $color-gray-dark-3;
     box-sizing: border-box;
     background-color: $color-gray-light-2;
-    
 }
 
-.heading-primary {
-    color: $color-gray-dark-3;
-    text-transform: uppercase;
-    
-    
+.heading {
     &--name {
         display: block;
         font-size: 4rem;
@@ -30,6 +25,25 @@ body {
         letter-spacing: 1.75rem;
         animation: moveInRight 1s ease-out;
         margin-top: 7rem;
+    }
+}
+
+.about {
+
+    
+    &--heading {
+        padding: 15rem 0rem 0rem 10rem;
+        font-size: 3rem;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    &--text {
+        padding: 0rem 0rem 0rem 10rem;
+        font-size: 1.8rem;
+        text-align: left;
+        max-width: 75vw;
+    
     }
 }
 

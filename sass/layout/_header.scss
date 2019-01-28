@@ -1,12 +1,17 @@
-.header {
-    height: 95vh;
+.section {
+    height: 100vh;
     position: relative;
-
-    &__text-box {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        text-align: center;
-        transform: translate(-50%, -50%);
+    
+    &__title-box {
+        @include absCenter;
+        text-transform: uppercase;
     }
+
+    &__about-text {
+        @include absCenter;
+        width: 95vw;
+        height: 100vh;
+    }
+
+    
 }
