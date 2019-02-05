@@ -109,6 +109,34 @@ body {
     opacity: 1;
     transform: translateY(0); } }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.btn, .btn:visited, .btn:link {
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1rem 4rem;
+  border-radius: 2rem;
+  transition: all .2s;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  border: solid 1px;
+  margin-top: 3rem; }
+
+.btn-info {
+  left: 50%;
+  transform: translate(-50%, 0%);
+  animation: fadeIn 2.5s ease-out; }
+
 .section {
   height: 100vh;
   position: relative; }
