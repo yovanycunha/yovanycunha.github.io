@@ -47,7 +47,8 @@ body {
   line-height: 1.7;
   color: #333;
   box-sizing: border-box;
-  background-color: #eee; }
+  background-color: #eee;
+  background: rgba(0, 0, 0, 0) url("https://www.toptal.com/designers/subtlepatterns/patterns/qbkls.png") repeat scroll 0% 0%; }
 
 .heading--name {
   display: block;
@@ -55,7 +56,7 @@ body {
   letter-spacing: 2rem;
   font-weight: 600;
   animation: moveInLeft 1s ease-out;
-  initial-letter-align: center; }
+  text-align: center; }
 
 .heading--sub {
   display: block;
@@ -63,7 +64,8 @@ body {
   font-weight: 700;
   letter-spacing: 1.75rem;
   animation: moveInRight 1s ease-out;
-  margin-top: 7rem; }
+  margin-top: 7rem;
+  text-align: center; }
 
 .about--heading {
   padding: 15rem 0rem 0rem 10rem;
