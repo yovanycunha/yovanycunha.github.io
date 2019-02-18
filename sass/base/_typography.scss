@@ -2,10 +2,11 @@ body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
     line-height: 1.7;
-    color: $color-gray-dark-3;
+    color: $color-white;
     box-sizing: border-box;
     background-color: $color-gray-light-2;
-    background: rgba(0, 0, 0, 0) url("https://www.toptal.com/designers/subtlepatterns/patterns/qbkls.png") repeat scroll 0% 0%;
+    background: rgba(0, 0, 0, 0)
+    url("../../img/clouds.jpg");
 }
 
 .heading {
@@ -52,6 +53,17 @@ body {
 
 .link {
     text-decoration: none;
-    color: $color-gray-dark-3;
+    color: inherit;
 }
 
+.icon-header {
+    fill: $color-white;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* animation: blink 2s steps(3, start) infinite; */
+
+    &:hover {
+        animation: blink 2s steps(3, start) infinite;
+    }
+}

@@ -55,3 +55,9 @@
         opacity: 1;
     }
 }
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
