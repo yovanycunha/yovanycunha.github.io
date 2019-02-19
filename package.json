@@ -6,8 +6,11 @@
   "dependencies": {
     "sass": "^1.17.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  },
   "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
