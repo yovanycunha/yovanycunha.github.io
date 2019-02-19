@@ -7,6 +7,17 @@
 /*
 *Breakpoints for responsive design
 */
+/*
+*Defines default font size
+*/
+/* #region Colors*/
+/* #region Primary Color*/
+/* #endregion */
+/* #region Secondary Color*/
+/* #endregion */
+/* #region Tertiary Color*/
+/* #endregion */
+/* #endregion */
 *,
 *::after,
 *::before {
@@ -29,3 +40,39 @@ html {
 body {
   box-sizing: border-box;
   padding: 0; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400; }
+
+.heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 4rem;
+  position: absolute;
+  z-index: 4;
+  text-align: center;
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem;
+  /*     background: rgba($color-white, 0.6); */ }
+  .heading--main {
+    margin-bottom: 3rem; }
+
+.welcome {
+  height: 100vh;
+  background-size: cover;
+  background: url("../../img/trees.jpg");
+  background-attachment: fixed; }
+  .welcome::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.45);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 2; }

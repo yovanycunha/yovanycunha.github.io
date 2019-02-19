@@ -1,0 +1,26 @@
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+.heading {
+    @include absCenter;
+
+    color: $color-white;
+    font-size: 4rem;
+    position: absolute;
+    z-index: 4;
+    text-align: center;
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem;
+/*     background: rgba($color-white, 0.6); */
+
+
+    &--main{
+        margin-bottom: 3rem;
+    }
+
+    &--sub {
+    }
+}
