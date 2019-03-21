@@ -26,4 +26,7 @@ html {
 body {
     box-sizing: border-box;
     padding: 0;
+    background-size: cover;
+    background: url("../../img/trees.jpg");
+    background-attachment: fixed;
 }

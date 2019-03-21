@@ -1,12 +1,9 @@
 .welcome {
     height: 100vh;
-    background-size: cover;
-    background: url("../../img/trees.jpg");
-    background-attachment: fixed;
 
     &::before {
         content: "";
-        background: rgba($color-black, 0.45);
+        background: rgba($color-black, 0.60);
         top: 0;
         left: 0;
         right: 0;
@@ -14,5 +11,20 @@
         position: absolute;
         z-index: 2;
     }
+}
+
+.material-icons{
+    @include absCenter;
+    transition: all;
+    font-family: 'Material Icons';
+    font-size: 10rem;
+    color: $color-white;
+    z-index: 2;
+    margin-top: 25rem;
+    animation: blink 2.5s ease-in-out infinite;
+}
+
+.about-me{
+    height: 100vh;
 }
 

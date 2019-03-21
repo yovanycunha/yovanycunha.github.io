@@ -14,13 +14,16 @@ body {
     border: none;
     border-radius: 2rem;
     padding: 1rem;
-/*     background: rgba($color-white, 0.6); */
-
-
+    transition: all .3s ease;
+    /*     background: rgba($color-white, 0.6); */
+    
+    
     &--main{
+        animation: moveInLeft 1s ease-out ;
         margin-bottom: 3rem;
     }
 
     &--sub {
+        animation: moveInRight 1s ease-out;
     }
 }
