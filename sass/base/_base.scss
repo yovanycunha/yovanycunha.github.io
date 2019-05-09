@@ -27,6 +27,6 @@ body {
     box-sizing: border-box;
     padding: 0;
     background-size: cover;
-    background: url("../../img/trees.jpg");
+    background: rgba($color-black, $alpha: 1.0);
     background-attachment: fixed;
 }
