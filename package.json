@@ -4,7 +4,6 @@
   "description": "Personal Page",
   "main": "index.js",
   "dependencies": {
-    "html-pdf": "^2.2.0",
     "sass": "^1.17.0"
   },
   "devDependencies": {
