@@ -1,0 +1,28 @@
+body {
+    font-family: 'Poiret One', cursive;
+    font-weight: 400;
+}
+
+.heading {
+    @include absCenter;
+    color: $color-white;
+    font-size: 4rem;
+    position: absolute;
+    z-index: 4;
+    text-align: center;
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem;
+    transition: all .3s ease;
+    
+    
+    &--main{
+        animation: moveInLeft 1s ease-out ;
+        margin-bottom: 3rem;
+        font-size: 7rem;
+    }
+
+    &--sub {
+        animation: moveInRight 1s ease-out;
+    }
+}
