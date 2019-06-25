@@ -1,12 +1,10 @@
 .welcome {
     height: 100vh;
 }
-/* 
+
 .info {
 
-    background-color: red;
     font-size: 1.7rem;
-    top: 60%;
 
     &__checkbox {
         display: none;
@@ -16,7 +14,106 @@
         background-color: $color-white;
         height: 7rem;
         width: 7rem;
+        @include absCenter;
         position: absolute;
-        
+        top: 75%;
+        border-radius: 50%; 
+        z-index: 2000;
+        text-align: center;
+        cursor: pointer;
+        transition: all .3s;
     }
-} */
+
+    &__background {
+        position: relative;
+        border-radius: 50%;
+        box-shadow: 0 1rem 3rem rgba($color-black,.1);
+        transition: all .8s cubic-bezier(.86, 0, .07, 1);
+    }
+
+    &__content {
+        height: 25vh;
+        opacity: 0;
+        width: 0;
+        transition: all .8s cubic-bezier(.68, -.55, .265, 1.55);
+   
+    }
+
+    &__list {
+        position: absolute;
+        width: 100%;
+        list-style: none;
+        text-align: center;
+    }
+
+    &__item {
+        margin: 1
+    }
+
+    &__link {
+        &,
+        &:link,
+        &:visited {
+            display: inline-block;
+            font-size: 2rem;
+            font-weight: 300;
+            padding: 1rem 2rem;
+            color: $color-white;
+            text-decoration: none;
+            transition: all .4s;
+
+            span {
+                margin-right: 1.5rem;
+                display: inline-block;
+            }
+        }
+
+        &:hover,
+        &:active {
+            background-position: 100%;
+            color: $color-black;
+            transform: translateX(1rem)
+        }
+    }
+
+    //Funcionalidade (Essa é a hora de brilhar)
+    &__checkbox:checked~&__background {
+        transform: scale(30);
+    }
+
+    &__checkbox:checked~&__content {
+        opacity: 1;
+        width: 100%;
+    }
+
+    &__icon {
+        position: relative;
+        margin-top: 3.5rem;
+
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 3rem;
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: relative;
+            transition: all .3s;
+        }
+    }
+
+    &__checkbox:checked ~ &__button &__icon {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked ~ &__button {
+        top: 100%;
+    }
+
+
+
+}

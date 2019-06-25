@@ -112,22 +112,74 @@ body {
 .welcome {
   height: 100vh; }
 
-/* 
 .info {
-
-    background-color: red;
-    font-size: 1.7rem;
-    top: 60%;
-
-    &__checkbox {
-        display: none;
-    }
-
-    &__button {
-        background-color: $color-white;
-        height: 7rem;
-        width: 7rem;
-        position: absolute;
-        
-    }
-} */
+  font-size: 1.7rem; }
+  .info__checkbox {
+    display: none; }
+  .info__button {
+    background-color: #ffffff;
+    height: 7rem;
+    width: 7rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 75%;
+    border-radius: 50%;
+    z-index: 2000;
+    text-align: center;
+    cursor: pointer;
+    transition: all .3s; }
+  .info__background {
+    position: relative;
+    border-radius: 50%;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+    transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
+  .info__content {
+    height: 25vh;
+    opacity: 0;
+    width: 0;
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+  .info__list {
+    position: absolute;
+    width: 100%;
+    list-style: none;
+    text-align: center; }
+  .info__item {
+    margin: 1; }
+  .info__link, .info__link:link, .info__link:visited {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 300;
+    padding: 1rem 2rem;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all .4s; }
+    .info__link span, .info__link:link span, .info__link:visited span {
+      margin-right: 1.5rem;
+      display: inline-block; }
+  .info__link:hover, .info__link:active {
+    background-position: 100%;
+    color: #000;
+    transform: translateX(1rem); }
+  .info__checkbox:checked ~ .info__background {
+    transform: scale(30); }
+  .info__checkbox:checked ~ .info__content {
+    opacity: 1;
+    width: 100%; }
+  .info__icon {
+    position: relative;
+    margin-top: 3.5rem; }
+    .info__icon, .info__icon::before, .info__icon::after {
+      width: 3rem;
+      height: 3rem;
+      display: inline-block; }
+    .info__icon::before, .info__icon::after {
+      content: "";
+      position: relative;
+      transition: all .3s; }
+  .info__checkbox:checked ~ .info__button .info__icon {
+    background-color: transparent; }
+  .info__checkbox:checked ~ .info__button {
+    top: 100%; }
