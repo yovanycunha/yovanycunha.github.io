@@ -1,54 +1,163 @@
 .welcome {
     height: 100vh;
-
-    &::before {
-        content: "";
-        background: rgba($color-black, 0.60);
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        position: absolute;
-        z-index: 2;
-    }
 }
-/* 
-.material-icons{
-    @include absCenter;
-    transition: all;
-    font-family: 'Material Icons';
-    font-size: 10rem;
-    color: $color-white;
-    z-index: 2;
-    margin-top: 25rem;
-    animation: blink 2.5s ease-in-out infinite;
-}
- */
 
-.about {
-    height: 100vh;
-    width: 50vw;
-    margin: auto;
-    transition: all;
-    font-size: 2.5rem;
-    color: $color-white;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "info" "social";
+.linkedin {
+    background-image: url('../../img/linkedin.svg');
+}
+
+.twitter {
+    background-image: url('../../img/twitter-logo-silhouette.svg');
+}
+
+.instagram {
+    background-image: url('../../img/instagram.svg');
+}
+
+.git {
+    height: 4rem;
+    width: 4rem;
+    background-image: url('../../img/github-logo.svg');
 }
 
 .info {
 
-    ul {
-        list-style: none;
-        width: 80%;
-        margin: auto;
+    font-size: 1.7rem;
 
-        li {
-            text-align: center;
+    &__checkbox {
+        display: none;
+    }
+
+    &__button {
+        border: .1rem solid $color-white;
+        background-color: $color-black;
+        height: 7rem;
+        width: 7rem;
+        @include absCenter;
+        position: absolute;
+        top: 75%;
+        border-radius: 50%; 
+        z-index: 2000;
+        text-align: center;
+        cursor: pointer;
+        transition: all .3s;
+        
+        animation: blink 2s steps(500, start) infinite;
+    }
+
+    &__background {
+        position: relative;
+        border-radius: 50%;
+        box-shadow: 0 1rem 3rem rgba($color-black,.1);
+        transition: all .8s cubic-bezier(.86, 0, .07, 1);
+    }
+
+    &__content {
+        height: 25vh;
+        opacity: 0;
+        width: 0;
+    }
+
+    &__list {
+        display: inline-block;
+        width: 100%;
+        list-style: none;
+        margin-right: 1rem;
+    }
+
+    &__link {
+
+        &--icon {
+            min-height: 2.5rem;
+            min-width: 2.5rem;
+            display: inline-block;
+            background-repeat: no-repeat;
+            text-indent: -9999999rem;
+            background-size: 100% ;
+            filter: invert(100%);
+        }
+
+        &,
+        &:link,
+        &:visited {
+            display: inline-block;
             font-size: 2rem;
-            padding: 1rem;
+            font-weight: 300;
+            padding: 1rem 2rem;
+            color: $color-white;
+            text-decoration: none;
+            transition: all .4s;
+        }
+
+
+        &:hover,
+        &:active {
+            background-position: 100%;
+            color: $color-black;
+            transform: translateX(1rem);
         }
     }
-}
 
+    //Funcionalidade (Essa é a hora de brilhar)
+    &__checkbox:checked~&__content {
+        opacity: 1;
+        width: 100%;
+        animation: moveInBottom 1s ease-in-out;
+    }
+
+    &__icon {
+        position: relative;
+        margin-top: 3.5rem;
+        font-size: 3rem;
+
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 3rem;
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: relative;
+            transition: all .3s;
+        }
+    }
+
+    &__checkbox:checked ~ &__button &__icon {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked ~ &__button {
+        top: 115%;
+    }
+
+    @include respond(big-desktop) {
+        .info__checkbox:checked ~ .info__button {
+            top: 135%;
+        }
+    }
+
+    @include respond(tab-land) {
+        .info__checkbox:checked ~ .info__button {
+            top: 125%;
+        }
+    }
+
+    @include respond(tab-port) {
+        .info__checkbox:checked ~ .info__button {
+            top: 115%;
+        }
+    }
+
+    @include respond(phone) {
+        .info__checkbox:checked ~ .info__button {
+            top: 110%;
+        }
+    }
+
+
+
+}

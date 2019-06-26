@@ -93,6 +93,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  top: 45%;
   color: #ffffff;
   font-size: 4rem;
   position: absolute;
@@ -111,44 +112,105 @@ body {
 
 .welcome {
   height: 100vh; }
-  .welcome::before {
-    content: "";
-    background: rgba(0, 0, 0, 0.6);
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+
+.linkedin {
+  background-image: url("../../img/linkedin.svg"); }
+
+.twitter {
+  background-image: url("../../img/twitter-logo-silhouette.svg"); }
+
+.instagram {
+  background-image: url("../../img/instagram.svg"); }
+
+.git {
+  height: 4rem;
+  width: 4rem;
+  background-image: url("../../img/github-logo.svg"); }
+
+.info {
+  font-size: 1.7rem; }
+  .info__checkbox {
+    display: none; }
+  .info__button {
+    border: 0.1rem solid #ffffff;
+    background-color: #000;
+    height: 7rem;
+    width: 7rem;
     position: absolute;
-    z-index: 2; }
-
-/* 
-.material-icons{
-    @include absCenter;
-    transition: all;
-    font-family: 'Material Icons';
-    font-size: 10rem;
-    color: $color-white;
-    z-index: 2;
-    margin-top: 25rem;
-    animation: blink 2.5s ease-in-out infinite;
-}
- */
-.about {
-  height: 100vh;
-  width: 50vw;
-  margin: auto;
-  transition: all;
-  font-size: 2.5rem;
-  color: #ffffff;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "info" "social"; }
-
-.info ul {
-  list-style: none;
-  width: 80%;
-  margin: auto; }
-  .info ul li {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 75%;
+    border-radius: 50%;
+    z-index: 2000;
     text-align: center;
+    cursor: pointer;
+    transition: all .3s;
+    animation: blink 2s steps(500, start) infinite; }
+  .info__background {
+    position: relative;
+    border-radius: 50%;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+    transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
+  .info__content {
+    height: 25vh;
+    opacity: 0;
+    width: 0; }
+  .info__list {
+    display: inline-block;
+    width: 100%;
+    list-style: none;
+    margin-right: 1rem; }
+  .info__link--icon {
+    min-height: 2.5rem;
+    min-width: 2.5rem;
+    display: inline-block;
+    background-repeat: no-repeat;
+    text-indent: -9999999rem;
+    background-size: 100%;
+    filter: invert(100%); }
+  .info__link, .info__link:link, .info__link:visited {
+    display: inline-block;
     font-size: 2rem;
-    padding: 1rem; }
+    font-weight: 300;
+    padding: 1rem 2rem;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all .4s; }
+  .info__link:hover, .info__link:active {
+    background-position: 100%;
+    color: #000;
+    transform: translateX(1rem); }
+  .info__checkbox:checked ~ .info__content {
+    opacity: 1;
+    width: 100%;
+    animation: moveInBottom 1s ease-in-out; }
+  .info__icon {
+    position: relative;
+    margin-top: 3.5rem;
+    font-size: 3rem; }
+    .info__icon, .info__icon::before, .info__icon::after {
+      width: 3rem;
+      height: 3rem;
+      display: inline-block; }
+    .info__icon::before, .info__icon::after {
+      content: "";
+      position: relative;
+      transition: all .3s; }
+  .info__checkbox:checked ~ .info__button .info__icon {
+    background-color: transparent; }
+  .info__checkbox:checked ~ .info__button {
+    top: 115%; }
+  @media (min-width: 112.5em) {
+    .info .info__checkbox:checked ~ .info__button {
+      top: 135%; } }
+  @media (max-width: 75em) {
+    .info .info__checkbox:checked ~ .info__button {
+      top: 125%; } }
+  @media (max-width: 56.25em) {
+    .info .info__checkbox:checked ~ .info__button {
+      top: 115%; } }
+  @media (max-width: 37.5em) {
+    .info .info__checkbox:checked ~ .info__button {
+      top: 110%; } }
