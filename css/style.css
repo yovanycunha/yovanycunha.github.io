@@ -93,6 +93,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  top: 45%;
   color: #ffffff;
   font-size: 4rem;
   position: absolute;
@@ -112,12 +113,27 @@ body {
 .welcome {
   height: 100vh; }
 
+.linkedin {
+  background-image: url("../../img/linkedin.svg"); }
+
+.twitter {
+  background-image: url("../../img/twitter-logo-silhouette.svg"); }
+
+.instagram {
+  background-image: url("../../img/instagram.svg"); }
+
+.git {
+  height: 4rem;
+  width: 4rem;
+  background-image: url("../../img/github-logo.svg"); }
+
 .info {
   font-size: 1.7rem; }
   .info__checkbox {
     display: none; }
   .info__button {
-    background-color: #ffffff;
+    border: 0.1rem solid #ffffff;
+    background-color: #000;
     height: 7rem;
     width: 7rem;
     position: absolute;
@@ -130,7 +146,8 @@ body {
     z-index: 2000;
     text-align: center;
     cursor: pointer;
-    transition: all .3s; }
+    transition: all .3s;
+    animation: blink 2s steps(500, start) infinite; }
   .info__background {
     position: relative;
     border-radius: 50%;
@@ -139,15 +156,20 @@ body {
   .info__content {
     height: 25vh;
     opacity: 0;
-    width: 0;
-    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+    width: 0; }
   .info__list {
-    position: absolute;
+    display: inline-block;
     width: 100%;
     list-style: none;
-    text-align: center; }
-  .info__item {
-    margin: 1; }
+    margin-right: 1rem; }
+  .info__link--icon {
+    min-height: 2.5rem;
+    min-width: 2.5rem;
+    display: inline-block;
+    background-repeat: no-repeat;
+    text-indent: -9999999rem;
+    background-size: 100%;
+    filter: invert(100%); }
   .info__link, .info__link:link, .info__link:visited {
     display: inline-block;
     font-size: 2rem;
@@ -156,21 +178,18 @@ body {
     color: #ffffff;
     text-decoration: none;
     transition: all .4s; }
-    .info__link span, .info__link:link span, .info__link:visited span {
-      margin-right: 1.5rem;
-      display: inline-block; }
   .info__link:hover, .info__link:active {
     background-position: 100%;
     color: #000;
     transform: translateX(1rem); }
-  .info__checkbox:checked ~ .info__background {
-    transform: scale(30); }
   .info__checkbox:checked ~ .info__content {
     opacity: 1;
-    width: 100%; }
+    width: 100%;
+    animation: moveInBottom 1s ease-in-out; }
   .info__icon {
     position: relative;
-    margin-top: 3.5rem; }
+    margin-top: 3.5rem;
+    font-size: 3rem; }
     .info__icon, .info__icon::before, .info__icon::after {
       width: 3rem;
       height: 3rem;
@@ -182,4 +201,16 @@ body {
   .info__checkbox:checked ~ .info__button .info__icon {
     background-color: transparent; }
   .info__checkbox:checked ~ .info__button {
-    top: 100%; }
+    top: 115%; }
+  @media (min-width: 112.5em) {
+    .info .info__checkbox:checked ~ .info__button {
+      top: 135%; } }
+  @media (max-width: 75em) {
+    .info .info__checkbox:checked ~ .info__button {
+      top: 125%; } }
+  @media (max-width: 56.25em) {
+    .info .info__checkbox:checked ~ .info__button {
+      top: 115%; } }
+  @media (max-width: 37.5em) {
+    .info .info__checkbox:checked ~ .info__button {
+      top: 110%; } }

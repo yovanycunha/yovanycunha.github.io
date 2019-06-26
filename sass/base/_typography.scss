@@ -5,6 +5,7 @@ body {
 
 .heading {
     @include absCenter;
+    top: 45%;
     color: $color-white;
     font-size: 4rem;
     position: absolute;
