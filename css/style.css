@@ -41,7 +41,9 @@
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(3rem); }
+    transform: translateY(7rem); }
+  80% {
+    transform: translateY(-1rem); }
   100% {
     opacity: 1;
     transform: translateY(0); } }
@@ -123,8 +125,8 @@ body {
   background-image: url("../../img/instagram.svg"); }
 
 .git {
-  height: 4rem;
-  width: 4rem;
+  height: 3rem;
+  width: 3rem;
   background-image: url("../../img/github-logo.svg"); }
 
 .info {
@@ -156,36 +158,38 @@ body {
   .info__content {
     height: 25vh;
     opacity: 0;
-    width: 0; }
+    width: 0;
+    padding-block: 5rem; }
   .info__list {
     display: inline-block;
     width: 100%;
-    list-style: none;
-    margin-right: 1rem; }
-  .info__link--icon {
-    min-height: 2.5rem;
-    min-width: 2.5rem;
-    display: inline-block;
-    background-repeat: no-repeat;
-    text-indent: -9999999rem;
-    background-size: 100%;
-    filter: invert(100%); }
-  .info__link, .info__link:link, .info__link:visited {
-    display: inline-block;
-    font-size: 2rem;
-    font-weight: 300;
-    padding: 1rem 2rem;
-    color: #ffffff;
-    text-decoration: none;
-    transition: all .4s; }
-  .info__link:hover, .info__link:active {
-    background-position: 100%;
-    color: #000;
-    transform: translateX(1rem); }
+    list-style: none; }
+  .info__item {
+    display: inline; }
+  .info__link {
+    border-radius: 50%; }
+    .info__link--icon {
+      min-height: 2.5rem;
+      min-width: 2.5rem;
+      display: inline-block;
+      background-repeat: no-repeat;
+      text-indent: -9999999rem;
+      background-size: 100%;
+      filter: invert(100%); }
+    .info__link, .info__link:link, .info__link:visited {
+      display: inline-block;
+      font-size: 2rem;
+      font-weight: 300;
+      padding: 2rem 2rem;
+      color: #ffffff;
+      text-decoration: none;
+      transition: all .4s; }
+    .info__link:hover, .info__link:active {
+      box-shadow: 0 0 1rem rgba(255, 255, 255, 0.5); }
   .info__checkbox:checked ~ .info__content {
     opacity: 1;
     width: 100%;
-    animation: moveInBottom 1s ease-in-out; }
+    animation: moveInBottom .5s ease-in-out; }
   .info__icon {
     position: relative;
     margin-top: 3.5rem;

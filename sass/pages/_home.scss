@@ -15,14 +15,16 @@
 }
 
 .git {
-    height: 4rem;
-    width: 4rem;
+    height: 3rem;
+    width: 3rem;
     background-image: url('../../img/github-logo.svg');
 }
 
 .info {
 
     font-size: 1.7rem;
+
+    //transition: all .5s ease-in;
 
     &__checkbox {
         display: none;
@@ -56,16 +58,23 @@
         height: 25vh;
         opacity: 0;
         width: 0;
+        padding-block: 5rem;
     }
 
     &__list {
         display: inline-block;
         width: 100%;
         list-style: none;
-        margin-right: 1rem;
     }
 
+    &__item {
+        display: inline;
+    }
+
+
     &__link {
+
+        border-radius: 50%;
 
         &--icon {
             min-height: 2.5rem;
@@ -83,7 +92,7 @@
             display: inline-block;
             font-size: 2rem;
             font-weight: 300;
-            padding: 1rem 2rem;
+            padding: 2rem 2rem;
             color: $color-white;
             text-decoration: none;
             transition: all .4s;
@@ -92,9 +101,7 @@
 
         &:hover,
         &:active {
-            background-position: 100%;
-            color: $color-black;
-            transform: translateX(1rem);
+            box-shadow: 0 0 1rem rgba($color-white,.5)
         }
     }
 
@@ -102,7 +109,7 @@
     &__checkbox:checked~&__content {
         opacity: 1;
         width: 100%;
-        animation: moveInBottom 1s ease-in-out;
+        animation: moveInBottom .5s ease-in-out;
     }
 
     &__icon {
