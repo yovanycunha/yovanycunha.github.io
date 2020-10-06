@@ -4,7 +4,7 @@
   "description": "Personal Page",
   "main": "index.js",
   "dependencies": {
-    "sass": "^1.17.0"
+    "sass": "^1.26.11"
   },
   "devDependencies": {
     "node-sass": "^4.13.1"
