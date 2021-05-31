@@ -1,10 +1,12 @@
 import React from 'react'
 import GlobalStyle from './assets/styles/globalStyle';
 
+import Fullpage from './components/Fullpage/Fullpage';
+
 function App() {
   return (
     <React.Fragment>
-      <div>a</div>
+      <Fullpage />
       <GlobalStyle />
     </React.Fragment>
   );
