@@ -15,7 +15,8 @@
     "baseUrl": ".",
     "paths": {
       "@pages/*": ["scr/pages"],
-      "@components/*": ["scr/components"]
+      "@components/*": ["scr/components"],
+      "@styles/*": ["src/styles"],
     }
   },
   "include": ["declarations.d.ts","**/*.ts","**/*.tsx"],
